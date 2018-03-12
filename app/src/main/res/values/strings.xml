@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Chess Score Counter</string>
+    <string name="white_player">Player White</string>
+    <string name="black_pawn">Black Pawn</string>
+    <string name="black_rook">Black Rook</string>
+    <string name="black_knight">Black Knight</string>
+    <string name="black_bishop">Black Bishop</string>
+    <string name="black_queen">Black Queen</string>
+    <string name="black_checkmate">Checkmate</string>
+    <string name="reset_score_white_player">Reset</string>
+
+    <string name="black_player">Player Black</string>
+    <string name="white_pawn">White Pawn</string>
+    <string name="white_rook">White Rook</string>
+    <string name="white_knight">White Knight</string>
+    <string name="white_bishop">White Bishop</string>
+    <string name="white_queen">White Queen</string>
+    <string name="white_checkmate">Checkmate</string>
+    <string name="reset_score_black_player">Reset</string>
+
 </resources>

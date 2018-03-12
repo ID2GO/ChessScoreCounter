@@ -5,37 +5,45 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.exemple.android.chessscorecounter.R;
 
 public class MainActivity extends AppCompatActivity {
     // Tracks the score for Team A
-    int scoreWhite = 0;
+    int scoreWhite;
     // Tracks the score for Team B
-    int scoreBlack = 0;
+    int scoreBlack;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+
+    }
+
+
     /**
      * Displays the given score for Team A.
      */
 
     public void displayForTeamA(int scoreWhite) {
-        TextView scoreView = (TextView) findViewById(R.id.white_score);
-        scoreView.setText(String.valueOf(scoreWhite));
+        TextView scoreViewWhite = findViewById(R.id.white_score);
+        scoreViewWhite.setText(String.valueOf(scoreWhite));
     }
+
     /**
      * Displays the given score for Team B.
      */
     public void displayForTeamB(int scoreBlack) {
-        TextView scoreView = (TextView) findViewById(R.id.black_score);
-        scoreView.setText(String.valueOf(scoreBlack));
-    }
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        TextView scoreViewBlack = findViewById(R.id.black_score);
+        scoreViewBlack.setText(String.valueOf(scoreBlack));
     }
 
-    private void displayForTeamA() {
-    }
+
+
 
     public void scoreBlackPawnForTeamWhite(View v){
         scoreWhite = scoreWhite +1;
@@ -62,9 +70,6 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamA (scoreWhite);
     }
 
-
-    private void displayForTeamB() {
-    }
 
     public void scoreWhitePawnForTeamBlack(View v){
         scoreBlack = scoreBlack +1;
