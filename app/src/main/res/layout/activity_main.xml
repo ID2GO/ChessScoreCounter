@@ -1,235 +1,256 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="#9E9E9E"
-    android:orientation="horizontal"
-
     tools:context="com.exemple.android.chessscorecounter.MainActivity">
 
-
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        tools:context=".MainActivity">
+        android:orientation="vertical">
 
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center_horizontal"
-            android:padding="5dp"
-            android:text="@string/white_player"
-            android:textColor="#FFFFFF"
-            android:textSize="25sp" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/white_score"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:fontFamily="sans-serif-light"
-            android:gravity="center_horizontal"
-            android:padding="5dp"
-            android:text="0"
-            android:textColor="#000000"
-            android:textSize="30sp" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:context=".MainActivity">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="@string/white_player"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/white_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="0"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="#000000"
+                    android:onClick="scoreBlackPawnForTeamWhite"
+                    android:text="@string/black_pawn"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="#000000"
+                    android:onClick="scoreBlackRookForTeamWhite"
+                    android:text="@string/black_rook"
+                    android:textColor="#FFFFFF" />
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="#000000"
+                    android:onClick="scoreBlackKnightForTeamWhite"
+                    android:text="@string/black_knight"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="#000000"
+                    android:onClick="scoreBlackBishopForTeamWhite"
+                    android:text="@string/black_bishop"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="#000000"
+                    android:onClick="scoreBlackQueenForTeamWhite"
+                    android:text="@string/black_queen"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="#000000"
+                    android:onClick="scoreBlackKingForTeamWhite"
+                    android:text="@string/black_checkmate"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/resetWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#D50000"
+                    android:onClick="resetScoreTeamA"
+                    android:text="@string/reset_score_white_player"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:context=".MainActivity">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="@string/black_player"
+                    android:textColor="#000000"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/black_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="0"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="#FFFFFF"
+                    android:onClick="scoreWhitePawnForTeamBlack"
+                    android:text="@string/white_pawn"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="#FFFFFF"
+                    android:onClick="scoreWhiteRookForTeamBlack"
+                    android:text="@string/white_rook"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="#FFFFFF"
+                    android:onClick="scoreWhiteKnightForTeamBlack"
+                    android:text="@string/white_knight"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="#FFFFFF"
+                    android:onClick="scoreWhiteBishopForTeamBlack"
+                    android:text="@string/white_bishop"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="#FFFFFF"
+                    android:onClick="scoreWhiteQueenForTeamBlack"
+                    android:text="@string/white_queen"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="#FFFFFF"
+                    android:onClick="scoreWhiteKingForTeamBlack"
+                    android:text="@string/white_checkmate"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/resetBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#D50000"
+                    android:onClick="resetScoreTeamB"
+                    android:text="@string/reset_score_black_player"
+                    android:textColor="#FFFFFF" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:background="#000000"
-            android:onClick="scoreBlackPawnForTeamWhite"
-            android:text="@string/black_pawn"
-            android:textColor="#FFFFFF" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:background="#000000"
-            android:onClick="scoreBlackRookForTeamWhite"
-            android:text="@string/black_rook"
-            android:textColor="#FFFFFF" />
-
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:background="#000000"
-            android:onClick="scoreBlackKnightForTeamWhite"
-            android:text="@string/black_knight"
-            android:textColor="#FFFFFF" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:background="#000000"
-            android:onClick="scoreBlackBishopForTeamWhite"
-            android:text="@string/black_bishop"
-            android:textColor="#FFFFFF" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:background="#000000"
-            android:onClick="scoreBlackQueenForTeamWhite"
-            android:text="@string/black_queen"
-            android:textColor="#FFFFFF" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:background="#000000"
-            android:onClick="scoreBlackKingForTeamWhite"
-            android:text="@string/black_checkmate"
-            android:textColor="#FFFFFF" />
-
-        <Button
-            android:id="@+id/resetWhite"
-            android:layout_width="wrap_content"
+            android:id="@+id/resetBlackWhite"
+            android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
             android:background="#D50000"
-            android:onClick="resetScoreTeamA"
-            android:text="@string/reset_score_white_player"
-            android:textColor="#FFFFFF" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        tools:context=".MainActivity">
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center_horizontal"
-            android:padding="5dp"
-            android:text="@string/black_player"
-            android:textColor="#000000"
-            android:textSize="25sp" />
-
-        <TextView
-            android:id="@+id/black_score"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:fontFamily="sans-serif-light"
-            android:gravity="center_horizontal"
-            android:padding="5dp"
-            android:text="0"
-            android:textColor="#000000"
-            android:textSize="30sp" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:background="#FFFFFF"
-            android:onClick="scoreWhitePawnForTeamBlack"
-            android:text="@string/white_pawn"
-            android:textColor="#000000" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:background="#FFFFFF"
-            android:onClick="scoreWhiteRookForTeamBlack"
-            android:text="@string/white_rook"
-            android:textColor="#000000" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:background="#FFFFFF"
-            android:onClick="scoreWhiteKnightForTeamBlack"
-            android:text="@string/white_knight"
-            android:textColor="#000000" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:background="#FFFFFF"
-            android:onClick="scoreWhiteBishopForTeamBlack"
-            android:text="@string/white_bishop"
-            android:textColor="#000000" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:background="#FFFFFF"
-            android:onClick="scoreWhiteQueenForTeamBlack"
-            android:text="@string/white_queen"
-            android:textColor="#000000" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:background="#FFFFFF"
-            android:onClick="scoreWhiteKingForTeamBlack"
-            android:text="@string/white_checkmate"
-            android:textColor="#000000" />
-
-        <Button
-            android:id="@+id/resetBlack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:background="#D50000"
-            android:onClick="resetScoreTeamB"
-            android:text="@string/reset_score_black_player"
+            android:onClick="resetScores"
+            android:text="@string/reset_scores"
             android:textColor="#FFFFFF" />
 
 
     </LinearLayout>
-
-
-</LinearLayout>
+</ScrollView>

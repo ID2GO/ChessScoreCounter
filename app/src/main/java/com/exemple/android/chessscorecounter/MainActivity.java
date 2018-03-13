@@ -112,4 +112,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void resetScores(View v) {
+        scoreWhite = 0;
+        scoreBlack = 0;
+        displayForTeamA(scoreWhite);
+        displayForTeamB(scoreBlack);
+    }
+
 }

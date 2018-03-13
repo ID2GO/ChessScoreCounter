@@ -17,5 +17,6 @@
     <string name="white_queen">White Queen</string>
     <string name="white_checkmate">Checkmate</string>
     <string name="reset_score_black_player">Reset</string>
+    <string name="reset_scores">Reset</string>
 
 </resources>
